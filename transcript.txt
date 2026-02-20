@@ -1,0 +1,382 @@
+Script started on Thu Feb 19 18:07:05 2026
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hscript transcript.txt[21Dcat test/37.s        [8D[13Dmake test/37.run[16Dcat[P[9Csnek[?2004l
+37[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcat test/37.snek[16Dscript transcript.txt[21Dcat test/37.s        [8D[13Dmake test/37.run[?2004l
+make: `test/37.run' is up to date.
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hmake test/37.run[16Dcat[P[9Csnek[16Dscript transcript.txt[21Dcat test/37.s        [8D[?2004l
+cat: test/37.s: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcat test/37.s[13Dmake test/37.run[16Dcat[P[9Csnek[16Dmake test/37.run[16Dcat[P[9Cs   [13D             [13D[7mmake test/37.run[27m[16D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27mr[27mu[27mn[?2004l
+make: `test/37.run' is up to date.
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hmake test/37.run[16Dcat[P[9Cs   [?2004l
+cat: test/37.s: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/37.run[27m[13D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27mr[27mu[27mn[?2004l
+37
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/negate.snek[27m[20D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27me[27m.[27ms[27mn[27me[27mk[?2004l
+(negate (add1 3))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/negate.run[27m[20D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27me[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/negate.snek test/negate.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.04s
+[1m[92m     Running[0m `target/debug/adder test/negate.snek test/negate.s`
+nasm -f macho64 test/negate.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/negate.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/negate.s[27m[17D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27me[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 3
+add rax, 1
+neg rax
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/negate.run[27m[17D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27me[27m.[27mr[27mu[27mn[?2004l
+-4
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/add.snek[27m[17D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ma[27md[27md[27m.[27ms[27mn[27me[27mk[?2004l
+(add1 (add1 5))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/add.run[27m[17D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ma[27md[27md[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/add.snek test/add.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.02s
+[1m[92m     Running[0m `target/debug/adder test/add.snek test/add.s`
+nasm -f macho64 test/add.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/add.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/add.s[27m[14D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ma[27md[27md[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 5
+add rax, 1
+add rax, 1
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/add.run[27m[14D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ma[27md[27md[27m.[27mr[27mu[27mn[?2004l
+7
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/complex.snek[27m[21D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m.[27ms[27mn[27me[27mk[?2004l
+(sub1 (sub1 (add1 73)))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/complex.run[27m[21D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/complex.snek test/complex.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.02s
+[1m[92m     Running[0m `target/debug/adder test/complex.snek test/complex.s`
+nasm -f macho64 test/complex.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/complex.s[27m[18D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 73
+add rax, 1
+sub rax, 1
+sub rax, 1
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/complex.run[27m[18D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m.[27mr[27mu[27mn[?2004l
+72
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/nested.snek[27m[20D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27ms[27mn[27me[27mk[?2004l
+(negate (sub1 (negate 10)))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/nested.run[27m[20D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/nested.snek test/nested.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/nested.snek test/nested.s`
+nasm -f macho64 test/nested.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/nested.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/nested.s[27m[17D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 10
+neg rax
+sub rax, 1
+neg rax
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/nested.run[27m[17D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27mr[27mu[27mn[?2004l
+11
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/zero.snek[27m[18D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mz[27me[27mr[27mo[27m.[27ms[27mn[27me[27mk[?2004l
+0[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/zero.run[27m[18D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mz[27me[27mr[27mo[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/zero.snek test/zero.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/zero.snek test/zero.s`
+nasm -f macho64 test/zero.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/zero.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/zero.s[27m[15D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mz[27me[27mr[27mo[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 0
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/zero.run[27m[15D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mz[27me[27mr[27mo[27m.[27mr[27mu[27mn[?2004l
+0
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/negative.snek[27m[22D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27mi[27mv[27me[27m.[27ms[27mn[27me[27mk[?2004l
+-42[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/negative.run[27m[22D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27mi[27mv[27me[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/negative.snek test/negative.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.02s
+[1m[92m     Running[0m `target/debug/adder test/negative.snek test/negative.s`
+nasm -f macho64 test/negative.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/negative.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/negative.s[27m[19D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27mi[27mv[27me[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, -42
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/negative.run[27m[19D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mn[27me[27mg[27ma[27mt[27mi[27mv[27me[27m.[27mr[27mu[27mn[?2004l
+-42
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/double_negate.snek[27m[27D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27md[27mo[27mu[27mb[27ml[27me[27m_[27mn[27me[27mg[27ma[27mt[27me[27m.[27ms[27mn[27me[27mk[?2004l
+(negate (negate 15))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/double_negate.run[27m[27D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27md[27mo[27mu[27mb[27ml[27me[27m_[27mn[27me[27mg[27ma[27mt[27me[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/double_negate.snek test/double_negate.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/double_negate.snek test/double_negate.s`
+nasm -f macho64 test/double_negate.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/double_negate.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/double_negate.s[27m[24D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27md[27mo[27mu[27mb[27ml[27me[27m_[27mn[27me[27mg[27ma[27mt[27me[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 15
+neg rax
+neg rax
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/double_negate.run[27m[24D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27md[27mo[27mu[27mb[27ml[27me[27m_[27mn[27me[27mg[27ma[27mt[27me[27m.[27mr[27mu[27mn[?2004l
+15
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/deep_sub.snek[27m[22D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27md[27me[27me[27mp[27m_[27ms[27mu[27mb[27m.[27ms[27mn[27me[27mk[?2004l
+(sub1 (sub1 (sub1 (sub1 10))))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/deep_sub.run[27m[22D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27md[27me[27me[27mp[27m_[27ms[27mu[27mb[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/deep_sub.snek test/deep_sub.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/deep_sub.snek test/deep_sub.s`
+nasm -f macho64 test/deep_sub.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/deep_sub.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/deep_sub.s[27m[19D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27md[27me[27me[27mp[27m_[27ms[27mu[27mb[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 10
+sub rax, 1
+sub rax, 1
+sub rax, 1
+sub rax, 1
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/deep_sub.run[27m[19D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27md[27me[27me[27mp[27m_[27ms[27mu[27mb[27m.[27mr[27mu[27mn[?2004l
+6
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/cancel.snek[27m[20D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mc[27ma[27mn[27mc[27me[27ml[27m.[27ms[27mn[27me[27mk[?2004l
+(add1 (sub1 (add1 (sub1 99))))[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/cancel.run[27m[20D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mc[27ma[27mn[27mc[27me[27ml[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/cancel.snek test/cancel.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/cancel.snek test/cancel.s`
+nasm -f macho64 test/cancel.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cancel.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/cancel.s[27m[17D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mc[27ma[27mn[27mc[27me[27ml[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 99
+sub rax, 1
+add rax, 1
+sub rax, 1
+add rax, 1
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/cancel.run[27m[17D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mc[27ma[27mn[27mc[27me[27ml[27m.[27mr[27mu[27mn[?2004l
+99
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mrm test/37.run[27m[14D[27mr[27mm[27m [27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27mr[27mu[27mn[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/37.run[27m[16D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/37.snek test/37.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.02s
+[1m[92m     Running[0m `target/debug/adder test/37.snek test/37.s`
+nasm -f macho64 test/37.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/37.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/37.s[27m[13D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 37
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/37.run[27m[13D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27m3[27m7[27m.[27mr[27mu[27mn[?2004l
+37
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/max_int.snek[27m[21D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mm[27ma[27mx[27m_[27mi[27mn[27mt[27m.[27ms[27mn[27me[27mk[?2004l
+2147483647[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/max_int.run[27m[21D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mm[27ma[27mx[27m_[27mi[27mn[27mt[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/max_int.snek test/max_int.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/max_int.snek test/max_int.s`
+nasm -f macho64 test/max_int.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/max_int.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/max_int.s[27m[18D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mm[27ma[27mx[27m_[27mi[27mn[27mt[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 2147483647
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/max_int.run[27m[18D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mm[27ma[27mx[27m_[27mi[27mn[27mt[27m.[27mr[27mu[27mn[?2004l
+2147483647
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/min_int.snek[27m[21D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mm[27mi[27mn[27m_[27mi[27mn[27mt[27m.[27ms[27mn[27me[27mk[?2004l
+-2147483648[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/min_int.run[27m[21D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mm[27mi[27mn[27m_[27mi[27mn[27mt[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/min_int.snek test/min_int.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.03s
+[1m[92m     Running[0m `target/debug/adder test/min_int.snek test/min_int.s`
+nasm -f macho64 test/min_int.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/min_int.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/min_int.s[27m[18D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mm[27mi[27mn[27m_[27mi[27mn[27mt[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, -2147483648
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/min_int.run[27m[18D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mm[27mi[27mn[27m_[27mi[27mn[27mt[27m.[27mr[27mu[27mn[?2004l
+-2147483648
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/spaces.snek[27m[20D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ms[27mp[27ma[27mc[27me[27ms[27m.[27ms[27mn[27me[27mk[?2004l
+(   add1    (  negate   (  sub1   10  ) )    )[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/spaces.run[27m[20D[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27mp[27ma[27mc[27me[27ms[27m.[27mr[27mu[27mn[?2004l
+cargo run -- test/spaces.snek test/spaces.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.02s
+[1m[92m     Running[0m `target/debug/adder test/spaces.snek test/spaces.s`
+nasm -f macho64 test/spaces.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/spaces.run
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat test/spaces.s[27m[17D[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ms[27mp[27ma[27mc[27me[27ms[27m.[27ms[?2004l
+
+section .text
+global our_code_starts_here
+our_code_starts_here:
+  mov rax, 10
+sub rax, 1
+neg rax
+add rax, 1
+  ret
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7m./test/spaces.run[27m[17D[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ms[27mp[27ma[27mc[27me[27ms[27m.[27mr[27mu[27mn[?2004l
+-8
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hggit init[?2004l
+Reinitialized existing Git repository in /Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder/.git/
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hggit add .[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hs ggit status[?2004l
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .DS_Store[m
+	[32mnew file:   .gitignore[m
+	[32mnew file:   Cargo.lock[m
+	[32mnew file:   Cargo.toml[m
+	[32mnew file:   Makefile[m
+	[32mnew file:   README.md[m
+	[32mnew file:   runtime/libour_code.a[m
+	[32mnew file:   runtime/our_code.o[m
+	[32mnew file:   runtime/start.rs[m
+	[32mnew file:   src/main.rs[m
+	[32mnew file:   test/37.run[m
+	[32mnew file:   test/37.s[m
+	[32mnew file:   test/37.snek[m
+	[32mnew file:   test/add.run[m
+	[32mnew file:   test/add.s[m
+	[32mnew file:   test/add.snek[m
+	[32mnew file:   test/cancel.run[m
+	[32mnew file:   test/cancel.s[m
+	[32mnew file:   test/cancel.snek[m
+	[32mnew file:   test/complex.run[m
+	[32mnew file:   test/complex.s[m
+	[32mnew file:   test/complex.snek[m
+	[32mnew file:   test/deep_sub.run[m
+	[32mnew file:   test/deep_sub.s[m
+	[32mnew file:   test/deep_sub.snek[m
+	[32mnew file:   test/double_negate.run[m
+	[32mnew file:   test/double_negate.s[m
+	[32mnew file:   test/double_negate.snek[m
+	[32mnew file:   test/max_int.run[m
+	[32mnew file:   test/max_int.s[m
+	[32mnew file:   test/max_int.snek[m
+	[32mnew file:   test/min_int.run[m
+	[32mnew file:   test/min_int.s[m
+	[32mnew file:   test/min_int.snek[m
+	[32mnew file:   test/negate.run[m
+	[32mnew file:   test/negate.s[m
+	[32mnew file:   test/negate.snek[m
+	[32mnew file:   test/negative.run[m
+	[32mnew file:   test/negative.s[m
+	[32mnew file:   test/negative.snek[m
+	[32mnew file:   test/nested.run[m
+	[32mnew file:   test/nested.s[m
+	[32mnew file:   test/nested.snek[m
+	[32mnew file:   test/spaces.run[m
+	[32mnew file:   test/spaces.s[m
+	[32mnew file:   test/spaces.snek[m
+	[32mnew file:   test/zero.run[m
+	[32mnew file:   test/zero.s[m
+	[32mnew file:   test/zero.snek[m
+	[32mnew file:   transcript.txt[m
+
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hggit add -A[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hgit add -Astatus[?2004l
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .DS_Store[m
+	[32mnew file:   .gitignore[m
+	[32mnew file:   Cargo.lock[m
+	[32mnew file:   Cargo.toml[m
+	[32mnew file:   Makefile[m
+	[32mnew file:   README.md[m
+	[32mnew file:   runtime/libour_code.a[m
+	[32mnew file:   runtime/our_code.o[m
+	[32mnew file:   runtime/start.rs[m
+	[32mnew file:   src/main.rs[m
+	[32mnew file:   test/37.run[m
+	[32mnew file:   test/37.s[m
+	[32mnew file:   test/37.snek[m
+	[32mnew file:   test/add.run[m
+	[32mnew file:   test/add.s[m
+	[32mnew file:   test/add.snek[m
+	[32mnew file:   test/cancel.run[m
+	[32mnew file:   test/cancel.s[m
+	[32mnew file:   test/cancel.snek[m
+	[32mnew file:   test/complex.run[m
+	[32mnew file:   test/complex.s[m
+	[32mnew file:   test/complex.snek[m
+	[32mnew file:   test/deep_sub.run[m
+	[32mnew file:   test/deep_sub.s[m
+	[32mnew file:   test/deep_sub.snek[m
+	[32mnew file:   test/double_negate.run[m
+	[32mnew file:   test/double_negate.s[m
+	[32mnew file:   test/double_negate.snek[m
+	[32mnew file:   test/max_int.run[m
+	[32mnew file:   test/max_int.s[m
+	[32mnew file:   test/max_int.snek[m
+	[32mnew file:   test/min_int.run[m
+	[32mnew file:   test/min_int.s[m
+	[32mnew file:   test/min_int.snek[m
+	[32mnew file:   test/negate.run[m
+	[32mnew file:   test/negate.s[m
+	[32mnew file:   test/negate.snek[m
+	[32mnew file:   test/negative.run[m
+	[32mnew file:   test/negative.s[m
+	[32mnew file:   test/negative.snek[m
+	[32mnew file:   test/nested.run[m
+	[32mnew file:   test/nested.s[m
+	[32mnew file:   test/nested.snek[m
+	[32mnew file:   test/spaces.run[m
+	[32mnew file:   test/spaces.s[m
+	[32mnew file:   test/spaces.snek[m
+	[32mnew file:   test/zero.run[m
+	[32mnew file:   test/zero.s[m
+	[32mnew file:   test/zero.snek[m
+	[32mnew file:   transcript.txt[m
+
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mgit rm --cached .DS_Store[27m[25D[27mg[27mi[27mt[27m [27mr[27mm[27m [27m-[27m-[27mc[27ma[27mc[27mh[27me[27md[27m [27m.[27mD[27mS[27m_[27mS[27mt[27mo[27mr[27me[?2004l
+rm '.DS_Store'
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mfind . -name ".DS_Store" -exec git rm --cached {} +[27m[51D[27mf[27mi[27mn[27md[27m [27m.[27m [27m-[27mn[27ma[27mm[27me[27m [27m"[27m.[27mD[27mS[27m_[27mS[27mt[27mo[27mr[27me[27m"[27m [27m-[27me[27mx[27me[27mc[27m [27mg[27mi[27mt[27m [27mr[27mm[27m [27m-[27m-[27mc[27ma[27mc[27mh[27me[27md[27m [27m{[27m}[27m [27m+[?2004l
+fatal: pathspec './.DS_Store' did not match any files
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mecho ".DS_Store" >> .gitignore[27m[30D[27me[27mc[27mh[27mo[27m [27m"[27m.[27mD[27mS[27m_[27mS[27mt[27mo[27mr[27me[27m"[27m [27m>[27m>[27m [27m.[27mg[27mi[27mt[27mi[27mg[27mn[27mo[27mr[27me[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h
