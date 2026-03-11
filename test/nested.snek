@@ -1,1 +1,1 @@
-(negate (sub1 (negate 10)))
+(let ((a 1) (b 2)) (let ((c (+ a b))) (* c c)))
