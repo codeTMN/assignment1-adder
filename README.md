@@ -1,4 +1,4 @@
-# Boa Compiler
+# Cobra Compiler
 
 **Course:** CSCI 282L / Programming Languages
 
@@ -14,6 +14,31 @@ Boa is an expression compiler written in Rust that builds on the foundations of 
 - **Environment Tracking** — Implemented a symbol table using `im::HashMap` to map variable names to stack offsets, enabling nested scopes and variable shadowing.
 - **Binary Operations** — Added support for `+`, `-`, and `*`. Handled the complexity of saving the left operand to the stack to prevent register overwriting while evaluating the right operand, ensuring strict left-to-right evaluation.
 - **Error Handling** — Added compile-time panics to catch invalid syntax, unbound identifiers, and duplicate variable bindings within the same scope.
+
+## Tagged Value Representation (Memory Scheme)
+
+All values in this language are stored in **64-bit registers** but use the **Least Significant Bit (LSB)** as a type tag to distinguish between numbers and booleans at runtime.
+
+| Type | Encoding Rule | LSB | Example |
+|---|---|---|---|
+| **Number** | Shifted left by 1 bit (`n << 1`) | `0` | `5` → `10` (`0b1010`) |
+| **Boolean (false)** | Constant `1` | `1` | `false` → `1` (`0b01`) |
+| **Boolean (true)** | Constant `3` | `1` | `true` → `3` (`0b11`) |
+
+### Why Tag?
+
+By reserving the LSB as a type tag, the compiler can pack type information directly into the value itself without needing a separate type field or wrapper. Numbers always have an LSB of `0` (because of the left shift), and booleans always have an LSB of `1`.
+
+### Runtime Type Checking
+
+Before executing any arithmetic operation (`+`, `-`, `*`, `add1`, `sub1`), the compiler emits a **bitwise AND 1** check on the operand:
+
+```asm
+test rax, 1       ; check LSB
+jnz snek_error    ; if LSB != 0, value is not a number
+```
+
+If the LSB is **not `0`**, the value is a boolean (not a valid number), and the program safely jumps to a `snek_error` panic that reports an **"invalid argument"** to the user.
 
 ## Supported Language Features
 

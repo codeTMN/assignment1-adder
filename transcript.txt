@@ -1,382 +1,1172 @@
-Script started on Wed Mar 11 00:03:45 2026
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcargo add im[27m[12D[27mc[27ma[27mr[27mg[27mo[27m [27ma[27md[27md[27m [27mi[27mm[?2004l
-[1m[92m    Updating[0m crates.io index
-[1m[92m      Adding[0m im v15.1.0 to dependencies
-             Features:
-             [1m[91m-[0m arbitrary
-             [1m[91m-[0m debug
-             [1m[91m-[0m proptest
-             [1m[91m-[0m quickcheck
-             [1m[91m-[0m rayon
-             [1m[91m-[0m refpool
-             [1m[91m-[0m serde
-[1m[92m    Updating[0m crates.io index
-[1m[92m     Locking[0m 7 packages to latest Rust 1.93.1 compatible versions
-[1m[92m      Adding[0m bitmaps v2.1.0
-[1m[92m      Adding[0m im v15.1.0
-[1m[92m      Adding[0m rand_core v0.6.4
-[1m[92m      Adding[0m rand_xoshiro v0.6.0
-[1m[92m      Adding[0m sized-chunks v0.6.5
-[1m[92m      Adding[0m typenum v1.19.0
-[1m[92m      Adding[0m version_check v0.9.5
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hccargo check[?2004l
-[1m[96m Downloading[0m 1 crate                                                                                         [1m[96m Downloading[0m 2 crates                                                                                        [1m[96m Downloading[0m 3 crates                                                                                        [1m[96m Downloading[0m 4 crates                                                                                        [1m[96m Downloading[0m 5 crates                                                                                        [1m[96m Downloading[0m 6 crates                                                                                        [1m[96m Downloading[0m 7 crates                                                                                        [K[1m[92m  Downloaded[0m bitmaps v2.1.0
-[1m[96m Downloading[0m 6 crates                                                                                        [K[1m[92m  Downloaded[0m version_check v0.9.5
-[1m[96m Downloading[0m 5 crates, remaining bytes: 175.1KiB                                                             [K[1m[92m  Downloaded[0m rand_xoshiro v0.6.0
-[1m[96m Downloading[0m 4 crates, remaining bytes: 90.6KiB                                                              [K[1m[92m  Downloaded[0m im v15.1.0
-[1m[96m Downloading[0m 3 crates, remaining bytes: 58.5KiB                                                              [K[1m[92m  Downloaded[0m sized-chunks v0.6.5
-[1m[96m Downloading[0m 2 crates, remaining bytes: 10.6KiB                                                              [K[1m[92m  Downloaded[0m typenum v1.19.0
-[1m[96m Downloading[0m 1 crate                                                                                         [K[1m[92m  Downloaded[0m rand_core v0.6.4
-[1m[96m Downloading[0m 0 crates                                                                                        [K[1m[92m  Downloaded[0m 7 crates (302.0KiB) in 0.43s
-[1m[96m    Cleaning[0m [                         ]   0.00%                                                             [1m[96m    Cleaning[0m [                         ]   0.47%                                                             [1m[96m    Cleaning[0m [                         ]   1.17%                                                             [1m[96m    Cleaning[0m [>                        ]   4.13%                                                             [1m[96m    Cleaning[0m [>                        ]   5.18%                                                             [1m[96m    Cleaning[0m [>                        ]   6.43%                                                             [1m[96m    Cleaning[0m [>                        ]   7.76%                                                             [1m[96m    Cleaning[0m [=>                       ]   9.43%                                                             [1m[96m    Cleaning[0m [=>                       ]  11.57%                                                             [1m[96m    Cleaning[0m [==>                      ]  12.04%                                                             [1m[96m    Cleaning[0m [==>                      ]  12.74%                                                             [1m[96m    Cleaning[0m [==>                      ]  13.95%                                                             [1m[96m    Cleaning[0m [===>                     ]  17.30%                                                             [1m[96m    Cleaning[0m [====>                    ]  20.30%                                                             [1m[96m    Cleaning[0m [====>                    ]  20.77%                                                             [1m[96m    Cleaning[0m [====>                    ]  22.84%                                                             [1m[96m    Cleaning[0m [====>                    ]  23.30%                                                             [1m[96m    Cleaning[0m [====>                    ]  23.77%                                                             [1m[96m    Cleaning[0m [=====>                   ]  24.24%                                                             [1m[96m    Cleaning[0m [=====>                   ]  24.94%                                                             [1m[96m    Cleaning[0m [=====>                   ]  25.57%                                                             [1m[96m    Cleaning[0m [=====>                   ]  26.23%                                                             [1m[96m    Cleaning[0m [=====>                   ]  27.63%                                                             [1m[96m    Cleaning[0m [======>                  ]  29.07%                                                             [1m[96m    Cleaning[0m [======>                  ]  29.85%                                                             [1m[96m    Cleaning[0m [======>                  ]  31.45%                                                             [1m[96m    Cleaning[0m [======>                  ]  31.88%                                                             [1m[96m    Cleaning[0m [=======>                 ]  33.44%                                                             [1m[96m    Cleaning[0m [=======>                 ]  34.06%                                                             [1m[96m    Cleaning[0m [========>                ]  38.31%                                                             [1m[96m    Cleaning[0m [========>                ]  38.74%                                                             [1m[96m    Cleaning[0m [========>                ]  39.83%                                                             [1m[96m    Cleaning[0m [=========>               ]  40.34%                                                             [1m[96m    Cleaning[0m [=========>               ]  41.70%                                                             [1m[96m    Cleaning[0m [=========>               ]  42.09%                                                             [1m[96m    Cleaning[0m [===========>             ]  49.06%                                                             [1m[96m    Cleaning[0m [===========>             ]  50.51%                                                             [1m[96m    Cleaning[0m [=============>           ]  59.59%                                                             [1m[96m    Cleaning[0m [=============>           ]  59.90%                                                             [1m[96m    Cleaning[0m [==============>          ]  60.99%                                                             [1m[96m    Cleaning[0m [==============>          ]  61.42%                                                             [1m[96m    Cleaning[0m [==============>          ]  63.29%                                                             [1m[96m    Cleaning[0m [===============>         ]  64.58%                                                             [1m[96m    Cleaning[0m [================>        ]  68.12%                                                             [1m[96m    Cleaning[0m [================>        ]  69.29%                                                             [1m[96m    Cleaning[0m [=================>       ]  73.50%                                                             [1m[96m    Cleaning[0m [=================>       ]  73.93%                                                             [1m[96m    Cleaning[0m [=================>       ]  74.94%                                                             [1m[96m    Cleaning[0m [=================>       ]  75.60%                                                             [1m[96m    Cleaning[0m [==================>      ]  76.27%                                                             [1m[96m    Cleaning[0m [==================>      ]  77.32%                                                             [1m[96m    Cleaning[0m [==================>      ]  78.18%                                                             [1m[96m    Cleaning[0m [=====================>   ]  90.72%                                                             [1m[96m    Cleaning[0m [======================>  ]  94.31%                                                             [1m[96m    Cleaning[0m [======================>  ]  94.78%                                                             [1m[96m    Cleaning[0m [======================>  ]  95.25%                                                             [1m[96m    Cleaning[0m [======================>  ]  95.87%                                                             [1m[96m    Cleaning[0m [=======================> ]  96.77%                                                             [1m[96m    Cleaning[0m [=======================> ]  97.62%                                                             [1m[96m    Cleaning[0m [=======================> ]  98.32%                                                             [1m[96m    Cleaning[0m [=======================> ]  99.53%                                                             [K[1m[92m   Compiling[0m typenum v1.19.0
-[1m[92m   Compiling[0m version_check v0.9.5
-[1m[92m    Checking[0m rand_core v0.6.4
-[1m[92m    Checking[0m sexp v1.1.4
-[1m[96m    Building[0m [                            ] 0/13: sexp, typenum(build.rs), version_check, rand_core          [K[1m[92m    Checking[0m rand_xoshiro v0.6.0
-[1m[96m    Building[0m [===>                        ] 2/13: rand_xoshiro, typenum(build.rs), version_check             [K[1m[92m   Compiling[0m im v15.1.0
-[1m[96m    Building[0m [=====>                      ] 3/13: im(build.rs), rand_xoshiro, typenum(build.rs)              [1m[96m    Building[0m [=======>                    ] 4/13: im(build.rs), typenum(build.rs)                            [1m[96m    Building[0m [=========>                  ] 5/13: im(build), typenum(build.rs)                               [1m[96m    Building[0m [===========>                ] 6/13: im(build), typenum(build)                                  [1m[96m    Building[0m [==============>             ] 7/13: typenum(build)                                             [1m[96m    Building[0m [================>           ] 8/13: typenum                                                    [K[1m[92m    Checking[0m bitmaps v2.1.0
-[1m[96m    Building[0m [==================>         ] 9/13: bitmaps                                                    [K[1m[92m    Checking[0m sized-chunks v0.6.5
-[1m[96m    Building[0m [===================>       ] 10/13: sized-chunks                                               [1m[96m    Building[0m [=====================>     ] 11/13: im                                                         [K[1m[92m    Checking[0m adder v0.1.0 (/Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder)
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[33mwarning[0m[1m: unused import: `im::HashMap`[0m
- [1m[94m--> [0msrc/main.rs:1:5
-  [1m[94m|[0m
-[1m[94m1[0m [1m[94m|[0m use im::HashMap;
-  [1m[94m|[0m     [1m[33m^^^^^^^^^^^[0m
-  [1m[94m|[0m
-  [1m[94m= [0m[1mnote[0m: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
-
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[91merror[E0599][0m[1m: no variant or associated item named `Num` found for enum `Expr` in the current scope[0m
-  [1m[94m--> [0msrc/main.rs:85:15
-   [1m[94m|[0m
-[1m[94m15[0m [1m[94m|[0m enum Expr {
-   [1m[94m|[0m [1m[94m---------[0m [1m[94mvariant or associated item `Num` not found for this enum[0m
-[1m[94m...[0m
-[1m[94m85[0m [1m[94m|[0m         Expr::Num(n) => format!("mov rax, {}", *n),
-   [1m[94m|[0m               [1m[91m^^^[0m [1m[91mvariant or associated item not found in `Expr`[0m
-
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[91merror[E0599][0m[1m: no variant or associated item named `Add1` found for enum `Expr` in the current scope[0m
-  [1m[94m--> [0msrc/main.rs:86:15
-   [1m[94m|[0m
-[1m[94m15[0m [1m[94m|[0m enum Expr {
-   [1m[94m|[0m [1m[94m---------[0m [1m[94mvariant or associated item `Add1` not found for this enum[0m
-[1m[94m...[0m
-[1m[94m86[0m [1m[94m|[0m         Expr::Add1(subexpr) => compile_expr(subexpr) + "\nadd rax, 1",
-   [1m[94m|[0m               [1m[91m^^^^[0m [1m[91mvariant or associated item not found in `Expr`[0m
-
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[91merror[E0599][0m[1m: no variant or associated item named `Sub1` found for enum `Expr` in the current scope[0m
-  [1m[94m--> [0msrc/main.rs:87:15
-   [1m[94m|[0m
-[1m[94m15[0m [1m[94m|[0m enum Expr {
-   [1m[94m|[0m [1m[94m---------[0m [1m[94mvariant or associated item `Sub1` not found for this enum[0m
-[1m[94m...[0m
-[1m[94m87[0m [1m[94m|[0m         Expr::Sub1(subexpr) => compile_expr(subexpr) + "\nsub rax, 1",
-   [1m[94m|[0m               [1m[91m^^^^[0m [1m[91mvariant or associated item not found in `Expr`[0m
-
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[91merror[E0599][0m[1m: no variant or associated item named `Negate` found for enum `Expr` in the current scope[0m
-  [1m[94m--> [0msrc/main.rs:89:15
-   [1m[94m|[0m
-[1m[94m15[0m [1m[94m|[0m enum Expr {
-   [1m[94m|[0m [1m[94m---------[0m [1m[94mvariant or associated item `Negate` not found for this enum[0m
-[1m[94m...[0m
-[1m[94m89[0m [1m[94m|[0m         Expr::Negate(subexpr) => compile_expr(subexpr) + "\nneg rax",
-   [1m[94m|[0m               [1m[91m^^^^^^[0m [1m[91mvariant or associated item not found in `Expr`[0m
-
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1mFor more information about this error, try `rustc --explain E0599`.[0m
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[33mwarning[0m: `adder` (bin "adder") generated 1 warning
-[1m[91merror[0m: could not compile `adder` (bin "adder") due to 4 previous errors; 1 warning emitted
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcargo check[?2004l
-[1m[92m    Checking[0m adder v0.1.0 (/Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder)
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.50s
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcargo check[?2004l
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.05s
+Script started on Thu Mar 26 16:46:06 2026
 [1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
-[7mcat << 'EOF' > test/binop.snek[27m[K
-[7m(+ (* 2 3) 3)[27m[K
+[7mcat << 'EOF' > test/complex_mix.snek[27m[K
+[7m(let ((x 10) (y true)) (if (isnum x) (if y (+ x 5) x) 0))[27m[K
 [7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/let_simple.snek[27m[K
-[7m(let ((x 5)) (+ x x))[27m[K
+[7mcat << 'EOF' > test/err_add_bool.snek[27m[K
+[7m(+ 5 true)[27m[K
 [7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/let_multi.snek[27m[K
-[7m(let ((x 5) (y 6)) (+ x y))[27m[K
+[7mcat << 'EOF' > test/err_cmp_type.snek[27m[K
+[7m(= 5 true)[27m[K
 [7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/nested.snek[27m[K
-[7m(let ((a 1) (b 2)) (let ((c (+ a b))) (* c c)))[27m[K
-[7mEOF[27m[K[14A[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27mb[27mi[27mn[27mo[27mp[27m.[27ms[27mn[27me[27mk[1B[27m([27m+[27m [27m([27m*[27m [27m2[27m [27m3[27m)[27m [27m3[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27mx[27m [27m5[27m)[27m)[27m [27m([27m+[27m [27mx[27m [27mx[27m)[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27mm[27mu[27ml[27mt[27mi[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27mx[27m [27m5[27m)[27m [27m([27my[27m [27m6[27m)[27m)[27m [27m([27m+[27m [27mx[27m [27my[27m)[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27ma[27m [27m1[27m)[27m [27m([27mb[27m [27m2[27m)[27m)[27m [27m([27ml[27me[27mt[27m [27m([27m([27mc[27m [27m([27m+[27m [27ma[27m [27mb[27m)[27m)[27m)[27m [27m([27m*[27m [27mc[27m [27mc[27m)[27m)[27m)[1B[27mE[27mO[27mF[?2004l
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
-[7mmake test/binop.run[27m[K
-[7mcat test/binop.s[27m[K
-[7m./test/binop.run[27m[K
-[K
-[7mmake test/let_simple.run[27m[K
-[7mcat test/let_simple.s[27m[K
-[7m./test/let_simple.run[27m[K
-[K
-[7mmake test/let_multi.run[27m[K
-[7mcat test/let_multi.s[27m[K
-[7m./test/let_multi.run[27m[K
-[K
-[7mmake test/nested.run[27m[K
-[7mcat test/nested.s[27m[K
-[7m./test/nested.run[27m[K[14A[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mb[27mi[27mn[27mo[27mp[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mb[27mi[27mn[27mo[27mp[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mb[27mi[27mn[27mo[27mp[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27mm[27mu[27ml[27mt[27mi[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27mm[27mu[27ml[27mt[27mi[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ml[27me[27mt[27m_[27mm[27mu[27ml[27mt[27mi[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m.[27mr[27mu[27mn[?2004l
-cargo run -- test/simple.snek test/simple.s
-[1m[92m   Compiling[0m rand_core v0.6.4
-[1m[92m   Compiling[0m typenum v1.19.0
-[1m[96m    Building[0m [===========>                ] 6/13: typenum, rand_core                                         [K[1m[92m   Compiling[0m rand_xoshiro v0.6.0
-[1m[96m    Building[0m [===========>                ] 6/13: rand_xoshiro, typenum, rand_core                           [K[1m[92m   Compiling[0m bitmaps v2.1.0
-[1m[96m    Building[0m [===========>                ] 6/13: rand_xoshiro, typenum, rand_core, bitmaps                  [1m[96m    Building[0m [==============>             ] 7/13: rand_xoshiro, rand_core, bitmaps                           [1m[96m    Building[0m [================>           ] 8/13: rand_xoshiro, bitmaps                                      [1m[96m    Building[0m [==================>         ] 9/13: bitmaps                                                    [K[1m[92m   Compiling[0m sized-chunks v0.6.5
-[1m[96m    Building[0m [==================>         ] 9/13: sized-chunks, bitmaps                                      [1m[96m    Building[0m [===================>       ] 10/13: sized-chunks                                               [K[1m[92m   Compiling[0m im v15.1.0
-[1m[96m    Building[0m [===================>       ] 10/13: im, sized-chunks                                           [1m[96m    Building[0m [=====================>     ] 11/13: im                                                         [K[1m[92m   Compiling[0m adder v0.1.0 (/Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder)
-[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 1.61s
-[1m[92m     Running[0m `target/debug/adder test/simple.snek test/simple.s`
-nasm -f macho64 test/simple.s -o runtime/our_code.o
+[7mcat << 'EOF' > test/err_if_unbound.snek[27m[K
+[7m(if x 1 2)[27m[K
+[7mEOF[27m[K
+[7mcat << 'EOF' > test/err_break.snek[27m[K
+[7m(break 5)[27m[K
+[7mEOF[27m[K[14A[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27mm[27mi[27mx[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27mx[27m [27m1[27m0[27m)[27m [27m([27my[27m [27mt[27mr[27mu[27me[27m)[27m)[27m [27m([27mi[27mf[27m [27m([27mi[27ms[27mn[27mu[27mm[27m [27mx[27m)[27m [27m([27mi[27mf[27m [27my[27m [27m([27m+[27m [27mx[27m [27m5[27m)[27m [27mx[27m)[27m [27m0[27m)[27m)[1B[27mE[27mO[27mF[1B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27ma[27md[27md[27m_[27mb[27mo[27mo[27ml[27m.[27ms[27mn[27me[27mk[1B[27m([27m+[27m [27m5[27m [27mt[27mr[27mu[27me[27m)[1B[27mE[27mO[27mF[1B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27ms[27mn[27me[27mk[1B[27m([27m=[27m [27m5[27m [27mt[27mr[27mu[27me[27m)[1B[27mE[27mO[27mF[1B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[1B[27m([27mi[27mf[27m [27mx[27m [27m1[27m [27m2[27m)[1B[27mE[27mO[27mF[1B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[27mn[27me[27mk[1B[27m([27mb[27mr[27me[27ma[27mk[27m [27m5[27m)[1B[27mE[27mO[27mF[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mfor file in test/bool_true test/bool_false test/if_simple test/if_trut[7mh[7my test/if_nested test/block_simple test/loop_break test/loop_nested_break test/set_simple test/set_loop test/c[7mm[7mp_eq test/cmp_less test/cmp_greater test/type_isnum test/type_isbool test/complex_mix; do[27m[K
+[7m    make $file.run[27m[K
+[7m    ./$file.run[27m[K
+[7m    echo "---"[27m[K
+[7mdone[27m[K[6A[37C[27mf[27mo[27mr[27m [27mf[27mi[27ml[27me[27m [27mi[27mn[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mt[27mr[27mu[27me[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mf[27ma[27ml[27ms[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mt[27mr[27mu[27mth[27my[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mn[27me[27ms[27mt[27me[27md[27m [27mt[27me[27ms[27mt[27m/[27mb[27ml[27mo[27mc[27mk[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mn[27me[27ms[27mt[27me[27md[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ml[27mo[27mo[27mp[27m [27mt[27me[27ms[27mt[27m/[27mcm[27mp[27m_[27me[27mq[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27ml[27me[27ms[27ms[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27mg[27mr[27me[27ma[27mt[27me[27mr[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mn[27mu[27mm[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mb[27mo[27mo[27ml[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27mm[27mi[27mx[27m;[27m [27md[27mo[1B[27m [27m [27m [27m [27mm[27ma[27mk[27me[27m [27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27m.[27m/[27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27me[27mc[27mh[27mo[27m [27m"[27m-[27m-[27m-[27m"[1B[27md[27mo[27mn[27me[?2004l
+cargo run -- test/bool_true.snek test/bool_true.s
+[1m[92m   Compiling[0m adder v0.1.0 (/Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder)
+[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 2.04s
+[1m[92m     Running[0m `target/debug/adder test/bool_true.snek test/bool_true.s`
+nasm -f macho64 test/bool_true.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/simple.run
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_true.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc4xardA/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/bool_true.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in bool_true.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
 
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 42
-  ret
-42
-cargo run -- test/add.snek test/add.s
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/bool_true.run] Error 1
+zsh: no such file or directory: ./test/bool_true.run
+---
+cargo run -- test/bool_false.snek test/bool_false.s
 [1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/add.snek test/add.s`
-nasm -f macho64 test/add.s -o runtime/our_code.o
+[1m[92m     Running[0m `target/debug/adder test/bool_false.snek test/bool_false.s`
+nasm -f macho64 test/bool_false.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/add.run
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_false.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc3pXf3D/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/bool_false.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in bool_false.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
 
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 3
-add rax, 1
-add rax, 1
-add rax, 1
-  ret
-6
-cargo run -- test/binop.snek test/binop.s
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/bool_false.run] Error 1
+zsh: no such file or directory: ./test/bool_false.run
+---
+cargo run -- test/if_simple.snek test/if_simple.s
 [1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/binop.snek test/binop.s`
-nasm -f macho64 test/binop.s -o runtime/our_code.o
+[1m[92m     Running[0m `target/debug/adder test/if_simple.snek test/if_simple.s`
+nasm -f macho64 test/if_simple.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/binop.run
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc7KOLY9/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
 
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 2
-mov [rsp - 16], rax
-mov rax, 3
-imul rax, [rsp - 16]
-mov [rsp - 16], rax
-mov rax, 3
-add rax, [rsp - 16]
-  ret
-9
-cargo run -- test/let_simple.snek test/let_simple.s
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_simple.run] Error 1
+zsh: no such file or directory: ./test/if_simple.run
+---
+cargo run -- test/if_truthy.snek test/if_truthy.s
 [1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/let_simple.snek test/let_simple.s`
-nasm -f macho64 test/let_simple.s -o runtime/our_code.o
+[1m[92m     Running[0m `target/debug/adder test/if_truthy.snek test/if_truthy.s`
+nasm -f macho64 test/if_truthy.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/let_simple.run
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_truthy.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcdxe9LY/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_truthy.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_truthy.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
 
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 5
-mov [rsp - 16], rax
-mov rax, [rsp - 16]
-mov [rsp - 24], rax
-mov rax, [rsp - 16]
-add rax, [rsp - 24]
-  ret
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_truthy.run] Error 1
+zsh: no such file or directory: ./test/if_truthy.run
+---
+cargo run -- test/if_nested.snek test/if_nested.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/if_nested.snek test/if_nested.s`
+nasm -f macho64 test/if_nested.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_nested.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustckhFcYc/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_nested.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_nested.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_nested.run] Error 1
+zsh: no such file or directory: ./test/if_nested.run
+---
+cargo run -- test/block_simple.snek test/block_simple.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/block_simple.snek test/block_simple.s`
+nasm -f macho64 test/block_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/block_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustccyyMTn/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/block_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in block_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/block_simple.run] Error 1
+zsh: no such file or directory: ./test/block_simple.run
+---
+cargo run -- test/loop_break.snek test/loop_break.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/loop_break.snek test/loop_break.s`
+nasm -f macho64 test/loop_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_break.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcc1gxf9/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/loop_break.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in loop_break.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/loop_break.run] Error 1
+zsh: no such file or directory: ./test/loop_break.run
+---
+cargo run -- test/loop_nested_break.snek test/loop_nested_break.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/loop_nested_break.snek test/loop_nested_break.s`
+nasm -f macho64 test/loop_nested_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_nested_break.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc3jbrAn/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/loop_nested_break.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in loop_nested_break.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/loop_nested_break.run] Error 1
+zsh: no such file or directory: ./test/loop_nested_break.run
+---
+cargo run -- test/set_simple.snek test/set_simple.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/set_simple.snek test/set_simple.s`
+nasm -f macho64 test/set_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcLHSwbf/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/set_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in set_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/set_simple.run] Error 1
+zsh: no such file or directory: ./test/set_simple.run
+---
+cargo run -- test/set_loop.snek test/set_loop.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/set_loop.snek test/set_loop.s`
+nasm -f macho64 test/set_loop.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_loop.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcpfD0Sn/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/set_loop.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in set_loop.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/set_loop.run] Error 1
+zsh: no such file or directory: ./test/set_loop.run
+---
+cargo run -- test/cmp_eq.snek test/cmp_eq.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_eq.snek test/cmp_eq.s`
+nasm -f macho64 test/cmp_eq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_eq.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcUif0G9/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_eq.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_eq.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_eq.run] Error 1
+zsh: no such file or directory: ./test/cmp_eq.run
+---
+cargo run -- test/cmp_less.snek test/cmp_less.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_less.snek test/cmp_less.s`
+nasm -f macho64 test/cmp_less.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_less.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustciOseQR/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_less.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_less.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_less.run] Error 1
+zsh: no such file or directory: ./test/cmp_less.run
+---
+cargo run -- test/cmp_greater.snek test/cmp_greater.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_greater.snek test/cmp_greater.s`
+nasm -f macho64 test/cmp_greater.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_greater.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcFsDlBM/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_greater.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_greater.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_greater.run] Error 1
+zsh: no such file or directory: ./test/cmp_greater.run
+---
+cargo run -- test/type_isnum.snek test/type_isnum.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/type_isnum.snek test/type_isnum.s`
+nasm -f macho64 test/type_isnum.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isnum.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcS8B2Kk/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/type_isnum.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in type_isnum.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/type_isnum.run] Error 1
+zsh: no such file or directory: ./test/type_isnum.run
+---
+cargo run -- test/type_isbool.snek test/type_isbool.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/type_isbool.snek test/type_isbool.s`
+nasm -f macho64 test/type_isbool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isbool.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcveSlzK/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/type_isbool.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in type_isbool.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/type_isbool.run] Error 1
+zsh: no such file or directory: ./test/type_isbool.run
+---
+cargo run -- test/complex_mix.snek test/complex_mix.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/complex_mix.snek test/complex_mix.s`
+nasm -f macho64 test/complex_mix.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex_mix.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcmkSHuP/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/complex_mix.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "_our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in complex_mix.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/complex_mix.run] Error 1
+zsh: no such file or directory: ./test/complex_mix.run
+---
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mfor file in test/bool_true test/bool_false test/if_simple test/if_trut[7mh[7my test/if_nested test/block_simple test/loop_break test/loop_nested_break test/set_simple test/set_loop test/c[7mm[7mp_eq test/cmp_less test/cmp_greater test/type_isnum test/type_isbool test/complex_mix; do[27m[K
+[7m    make $file.run[27m[K
+[7m    ./$file.run[27m[K
+[7m    echo "---"[27m[K
+[7mdone[27m[K[6A[37C[27mf[27mo[27mr[27m [27mf[27mi[27ml[27me[27m [27mi[27mn[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mt[27mr[27mu[27me[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mf[27ma[27ml[27ms[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mt[27mr[27mu[27mth[27my[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mn[27me[27ms[27mt[27me[27md[27m [27mt[27me[27ms[27mt[27m/[27mb[27ml[27mo[27mc[27mk[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mn[27me[27ms[27mt[27me[27md[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ml[27mo[27mo[27mp[27m [27mt[27me[27ms[27mt[27m/[27mcm[27mp[27m_[27me[27mq[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27ml[27me[27ms[27ms[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27mg[27mr[27me[27ma[27mt[27me[27mr[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mn[27mu[27mm[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mb[27mo[27mo[27ml[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27mm[27mi[27mx[27m;[27m [27md[27mo[1B[27m [27m [27m [27m [27mm[27ma[27mk[27me[27m [27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27m.[27m/[27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27me[27mc[27mh[27mo[27m [27m"[27m-[27m-[27m-[27m"[1B[27md[27mo[27mn[27me[?2004l
+nasm -f macho64 test/bool_true.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_true.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcV0yhF0/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/bool_true.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in bool_true.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/bool_true.run] Error 1
+zsh: no such file or directory: ./test/bool_true.run
+---
+nasm -f macho64 test/bool_false.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_false.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc0rgTI6/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/bool_false.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in bool_false.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/bool_false.run] Error 1
+zsh: no such file or directory: ./test/bool_false.run
+---
+nasm -f macho64 test/if_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcQq1lWu/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_simple.run] Error 1
+zsh: no such file or directory: ./test/if_simple.run
+---
+nasm -f macho64 test/if_truthy.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_truthy.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcKmlfMX/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_truthy.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_truthy.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_truthy.run] Error 1
+zsh: no such file or directory: ./test/if_truthy.run
+---
+nasm -f macho64 test/if_nested.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_nested.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcfQJFvb/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/if_nested.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in if_nested.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/if_nested.run] Error 1
+zsh: no such file or directory: ./test/if_nested.run
+---
+nasm -f macho64 test/block_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/block_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcOAOMdF/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/block_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in block_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/block_simple.run] Error 1
+zsh: no such file or directory: ./test/block_simple.run
+---
+nasm -f macho64 test/loop_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_break.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcnnvJvL/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/loop_break.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in loop_break.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/loop_break.run] Error 1
+zsh: no such file or directory: ./test/loop_break.run
+---
+nasm -f macho64 test/loop_nested_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_nested_break.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcnN6VeL/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/loop_nested_break.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in loop_nested_break.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/loop_nested_break.run] Error 1
+zsh: no such file or directory: ./test/loop_nested_break.run
+---
+nasm -f macho64 test/set_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_simple.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcqqBfF3/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/set_simple.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in set_simple.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/set_simple.run] Error 1
+zsh: no such file or directory: ./test/set_simple.run
+---
+nasm -f macho64 test/set_loop.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_loop.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcXMQKHW/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/set_loop.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in set_loop.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/set_loop.run] Error 1
+zsh: no such file or directory: ./test/set_loop.run
+---
+nasm -f macho64 test/cmp_eq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_eq.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustc68ZjAe/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_eq.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_eq.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_eq.run] Error 1
+zsh: no such file or directory: ./test/cmp_eq.run
+---
+nasm -f macho64 test/cmp_less.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_less.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcF1LgGh/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_less.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_less.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_less.run] Error 1
+zsh: no such file or directory: ./test/cmp_less.run
+---
+nasm -f macho64 test/cmp_greater.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_greater.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcumiys3/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/cmp_greater.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in cmp_greater.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/cmp_greater.run] Error 1
+zsh: no such file or directory: ./test/cmp_greater.run
+---
+nasm -f macho64 test/type_isnum.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isnum.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcZ9Ic7G/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/type_isnum.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in type_isnum.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/type_isnum.run] Error 1
+zsh: no such file or directory: ./test/type_isnum.run
+---
+nasm -f macho64 test/type_isbool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isbool.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcag6XE6/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/type_isbool.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in type_isbool.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/type_isbool.run] Error 1
+zsh: no such file or directory: ./test/type_isbool.run
+---
+nasm -f macho64 test/complex_mix.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex_mix.run
+[1m[91merror[0m[1m: linking with `cc` failed: exit status: 1[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m:  "cc" "/var/folders/03/qm6s2cs90yn8tq7wsqltzs140000gn/T/rustcOZKOFA/symbols.o" "<2 object files omitted>" "<sysroot>/lib/rustlib/x86_64-apple-darwin/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-lSystem" "-lc" "-lm" "-arch" "x86_64" "-mmacosx-version-min=10.12.0" "-L" "runtime/" "-o" "test/complex_mix.run" "-Wl,-dead_strip" "-nodefaultlibs"
+  [1m[94m= [0m[1mnote[0m: some arguments are omitted. use `--verbose` to show all linker arguments
+  [1m[94m= [0m[1mnote[0m: Undefined symbols for architecture x86_64:
+            "our_code_starts_here", referenced from:
+                start::main::h522ef3b6a7b8c353 in complex_mix.start.49b0871fe9025d05-cgu.0.rcgu.o
+          ld: symbol(s) not found for architecture x86_64
+          clang: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+[1m[91merror[0m[1m: aborting due to 1 previous error[0m
+
+make: *** [test/complex_mix.run] Error 1
+zsh: no such file or directory: ./test/complex_mix.run
+---
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcclear[?2004l
+[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mfor file in test/bool_true test/bool_false test/if_simple test/if_trut[7mh[7my test/if_nested test/block_simple test/loop_break test/loop_nested_break test/set_simple test/set_loop test/c[7mm[7mp_eq test/cmp_less test/cmp_greater test/type_isnum test/type_isbool test/complex_mix; do[27m[K
+[7m    make $file.run[27m[K
+[7m    ./$file.run[27m[K
+[7m    echo "---"[27m[K
+[7mdone[27m[K[6A[37C[27mf[27mo[27mr[27m [27mf[27mi[27ml[27me[27m [27mi[27mn[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mt[27mr[27mu[27me[27m [27mt[27me[27ms[27mt[27m/[27mb[27mo[27mo[27ml[27m_[27mf[27ma[27ml[27ms[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mt[27mr[27mu[27mth[27my[27m [27mt[27me[27ms[27mt[27m/[27mi[27mf[27m_[27mn[27me[27ms[27mt[27me[27md[27m [27mt[27me[27ms[27mt[27m/[27mb[27ml[27mo[27mc[27mk[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ml[27mo[27mo[27mp[27m_[27mn[27me[27ms[27mt[27me[27md[27m_[27mb[27mr[27me[27ma[27mk[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ms[27mi[27mm[27mp[27ml[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27me[27mt[27m_[27ml[27mo[27mo[27mp[27m [27mt[27me[27ms[27mt[27m/[27mcm[27mp[27m_[27me[27mq[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27ml[27me[27ms[27ms[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27mg[27mr[27me[27ma[27mt[27me[27mr[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mn[27mu[27mm[27m [27mt[27me[27ms[27mt[27m/[27mt[27my[27mp[27me[27m_[27mi[27ms[27mb[27mo[27mo[27ml[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27mm[27mi[27mx[27m;[27m [27md[27mo[1B[27m [27m [27m [27m [27mm[27ma[27mk[27me[27m [27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27m.[27m/[27m$[27mf[27mi[27ml[27me[27m.[27mr[27mu[27mn[1B[27m [27m [27m [27m [27me[27mc[27mh[27mo[27m [27m"[27m-[27m-[27m-[27m"[1B[27md[27mo[27mn[27me[?2004l
+nasm -f macho64 test/bool_true.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_true.run
+true
+---
+nasm -f macho64 test/bool_false.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_false.run
+false
+---
+nasm -f macho64 test/if_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_simple.run
+73
+---
+nasm -f macho64 test/if_truthy.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_truthy.run
 10
-cargo run -- test/let_multi.snek test/let_multi.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/let_multi.snek test/let_multi.s`
-nasm -f macho64 test/let_multi.s -o runtime/our_code.o
+---
+nasm -f macho64 test/if_nested.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/let_multi.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 5
-mov [rsp - 16], rax
-mov rax, 6
-mov [rsp - 24], rax
-mov rax, [rsp - 16]
-mov [rsp - 32], rax
-mov rax, [rsp - 24]
-add rax, [rsp - 32]
-  ret
-11
-cargo run -- test/nested.snek test/nested.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/nested.snek test/nested.s`
-nasm -f macho64 test/nested.s -o runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_nested.run
+100
+---
+nasm -f macho64 test/block_simple.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/nested.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 1
-mov [rsp - 16], rax
-mov rax, 2
-mov [rsp - 24], rax
-mov rax, [rsp - 16]
-mov [rsp - 32], rax
-mov rax, [rsp - 24]
-add rax, [rsp - 32]
-mov [rsp - 32], rax
-mov rax, [rsp - 32]
-mov [rsp - 40], rax
-mov rax, [rsp - 32]
-imul rax, [rsp - 40]
-  ret
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/block_simple.run
 9
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
-[7mcat << 'EOF' > test/sub_order.snek[27m[K
-[7m(- (- 10 2) 3)[27m[K
-[7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/err_dup.snek[27m[K
-[7m(let ((x 5) (x 6)) x)[27m[K
-[7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/err_unbound.snek[27m[K
-[7m(let ((x 5)) y)[27m[K
-[7mEOF[27m[K
-[K
-[7mcat << 'EOF' > test/err_keyword.snek[27m[K
-[7m(let ((add1 5)) add1)[27m[K
-[7mEOF[27m[K[14A[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27ms[27mu[27mb[27m_[27mo[27mr[27md[27me[27mr[27m.[27ms[27mn[27me[27mk[1B[27m([27m-[27m [27m([27m-[27m [27m1[27m0[27m [27m2[27m)[27m [27m3[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27md[27mu[27mp[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27mx[27m [27m5[27m)[27m [27m([27mx[27m [27m6[27m)[27m)[27m [27mx[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27mx[27m [27m5[27m)[27m)[27m [27my[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mk[27me[27my[27mw[27mo[27mr[27md[27m.[27ms[27mn[27me[27mk[1B[27m([27ml[27me[27mt[27m [27m([27m([27ma[27md[27md[27m1[27m [27m5[27m)[27m)[27m [27ma[27md[27md[27m1[27m)[1B[27mE[27mO[27mF[?2004l
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mmake test/shadow.run[27m
-[7mcat test/shadow.s[27m[K
-[7m./test/shadow.run[27m[K
-[K
-[7mmake test/nested_arith.run[27m[K
-[7mcat test/nested_arith.s[27m[K
-[7m./test/nested_arith.run[27m[K
-[K
-[7mmake test/complex_let.run[27m[K
-[7mcat test/complex_let.s[27m[K
-[7m./test/complex_let.run[27m[K
-[K
-[7mmake test/sub_order.run[27m[K
-[7mcat test/sub_order.s[27m[K
-[7m./test/sub_order.run[27m[K[14A[21C[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27mh[27ma[27md[27mo[27mw[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ms[27mh[27ma[27md[27mo[27mw[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ms[27mh[27ma[27md[27mo[27mw[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m_[27ma[27mr[27mi[27mt[27mh[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m_[27ma[27mr[27mi[27mt[27mh[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mn[27me[27ms[27mt[27me[27md[27m_[27ma[27mr[27mi[27mt[27mh[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27ml[27me[27mt[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27ml[27me[27mt[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27mc[27mo[27mm[27mp[27ml[27me[27mx[27m_[27ml[27me[27mt[27m.[27mr[27mu[27mn[2B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27ms[27mu[27mb[27m_[27mo[27mr[27md[27me[27mr[27m.[27mr[27mu[27mn[1B[27mc[27ma[27mt[27m [27mt[27me[27ms[27mt[27m/[27ms[27mu[27mb[27m_[27mo[27mr[27md[27me[27mr[27m.[27ms[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27ms[27mu[27mb[27m_[27mo[27mr[27md[27me[27mr[27m.[27mr[27mu[27mn[?2004l
-cargo run -- test/shadow.snek test/shadow.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.04s
-[1m[92m     Running[0m `target/debug/adder test/shadow.snek test/shadow.s`
-nasm -f macho64 test/shadow.s -o runtime/our_code.o
+---
+nasm -f macho64 test/loop_break.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/shadow.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 10
-mov [rsp - 16], rax
-mov rax, 20
-mov [rsp - 24], rax
-mov rax, [rsp - 24]
-  ret
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_break.run
+42
+---
+nasm -f macho64 test/loop_nested_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_nested_break.run
+2
+---
+nasm -f macho64 test/set_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_simple.run
 20
-cargo run -- test/nested_arith.snek test/nested_arith.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/nested_arith.snek test/nested_arith.s`
-nasm -f macho64 test/nested_arith.s -o runtime/our_code.o
+---
+nasm -f macho64 test/set_loop.s -o runtime/our_code.o
 ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/nested_arith.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 2
-mov [rsp - 16], rax
-mov rax, 3
-imul rax, [rsp - 16]
-mov [rsp - 16], rax
-mov rax, 10
-mov [rsp - 24], rax
-mov rax, 4
-mov rbx, rax
-mov rax, [rsp - 24]
-sub rax, rbx
-add rax, [rsp - 16]
-  ret
-12
-cargo run -- test/complex_let.snek test/complex_let.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/complex_let.snek test/complex_let.s`
-nasm -f macho64 test/complex_let.s -o runtime/our_code.o
-ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex_let.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 5
-mov [rsp - 16], rax
-mov rax, 2
-mov [rsp - 24], rax
-mov rax, 3
-add rax, [rsp - 24]
-mov [rsp - 24], rax
-mov rax, [rsp - 16]
-mov [rsp - 32], rax
-mov rax, [rsp - 24]
-imul rax, [rsp - 32]
-  ret
-25
-cargo run -- test/sub_order.snek test/sub_order.s
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
-[1m[92m     Running[0m `target/debug/adder test/sub_order.snek test/sub_order.s`
-nasm -f macho64 test/sub_order.s -o runtime/our_code.o
-ar rcs runtime/libour_code.a runtime/our_code.o
-rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/sub_order.run
-
-section .text
-global our_code_starts_here
-our_code_starts_here:
-  mov rax, 10
-mov [rsp - 16], rax
-mov rax, 2
-mov rbx, rax
-mov rax, [rsp - 16]
-sub rax, rbx
-mov [rsp - 16], rax
-mov rax, 3
-mov rbx, rax
-mov rax, [rsp - 16]
-sub rax, rbx
-  ret
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_loop.run
 5
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcargo run -- test/err_dup.snek test/err_dup.s[27m[45D[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27md[27mu[27mp[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27md[27mu[27mp[27m.[27ms[?2004l
+---
+nasm -f macho64 test/cmp_eq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_eq.run
+true
+---
+nasm -f macho64 test/cmp_less.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_less.run
+true
+---
+nasm -f macho64 test/cmp_greater.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_greater.run
+true
+---
+nasm -f macho64 test/type_isnum.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isnum.run
+true
+---
+nasm -f macho64 test/type_isbool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isbool.run
+true
+---
+nasm -f macho64 test/complex_mix.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex_mix.run
+15
+---
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
+[7m./test/err_add_bool.run[27m[K
+[7mecho -e "\n"[27m[K
+[K
+[7mecho "=== RUNTIME ERROR: COMPARING DIFFERENT TYPES ==="[27m[K
+[7mmake test/err_cmp_type.run[27m[K
+[7m./test/err_cmp_type.run[27m[K
+[7mecho -e "\n"[27m[K
+[K
+[7mecho "=== COMPILE ERROR: UNBOUND VARIABLE ==="[27m[K
+[7mcargo run -- test/err_if_unbound.snek test/err_if_unbound.s[27m[K
+[7mecho -e "\n"[27m[K
+[K
+[7mecho "=== COMPILE ERROR: BREAK OUTSIDE LOOP ==="[27m[K
+[7mcargo run -- test/err_break.snek test/err_break.s[27m[K
+[7mecho -e "\n"[27m[K[14A[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27ma[27md[27md[27m_[27mb[27mo[27mo[27ml[27m.[27mr[27mu[27mn[1B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m"[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m [27mR[27mU[27mN[27mT[27mI[27mM[27mE[27m [27mE[27mR[27mR[27mO[27mR[27m:[27m [27mC[27mO[27mM[27mP[27mA[27mR[27mI[27mN[27mG[27m [27mD[27mI[27mF[27mF[27mE[27mR[27mE[27mN[27mT[27m [27mT[27mY[27mP[27mE[27mS[27m [27m=[27m=[27m=[27m"[1B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[1B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m"[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m [27mC[27mO[27mM[27mP[27mI[27mL[27mE[27m [27mE[27mR[27mR[27mO[27mR[27m:[27m [27mU[27mN[27mB[27mO[27mU[27mN[27mD[27m [27mV[27mA[27mR[27mI[27mA[27mB[27mL[27mE[27m [27m=[27m=[27m=[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[1B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m"[2B[27me[27mc[27mh[27mo[27m [27m"[27m=[27m=[27m=[27m [27mC[27mO[27mM[27mP[27mI[27mL[27mE[27m [27mE[27mR[27mR[27mO[27mR[27m:[27m [27mB[27mR[27mE[27mA[27mK[27m [27mO[27mU[27mT[27mS[27mI[27mD[27mE[27m [27mL[27mO[27mO[27mP[27m [27m=[27m=[27m=[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[1B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m"[?2004l
+=== RUNTIME ERROR: ADDING BOOLEAN ===
+cargo run -- test/err_add_bool.snek test/err_add_bool.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.04s
+[1m[92m     Running[0m `target/debug/adder test/err_add_bool.snek test/err_add_bool.s`
+nasm -f macho64 test/err_add_bool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/err_add_bool.run
+invalid argument
+
+
+=== RUNTIME ERROR: COMPARING DIFFERENT TYPES ===
+cargo run -- test/err_cmp_type.snek test/err_cmp_type.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_cmp_type.snek test/err_cmp_type.s`
+nasm -f macho64 test/err_cmp_type.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/err_cmp_type.run
+invalid argument
+
+
+=== COMPILE ERROR: UNBOUND VARIABLE ===
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_if_unbound.snek test/err_if_unbound.s`
+
+thread 'main' (13973379) panicked at src/main.rs:103:21:
+Unbound variable identifier x
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+=== COMPILE ERROR: BREAK OUTSIDE LOOP ===
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_break.snek test/err_break.s`
+
+thread 'main' (13973399) panicked at src/main.rs:191:25:
+break outside of loop
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hcclae  eal r[?2004l
+[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
+[7mmake test/err_add_bool.run[27m[K
+[7m./test/err_add_bool.run[27m[K
+[K
+[7mecho -e "\nTesting err_cmp_type..."[27m[K
+[7mmake test/err_cmp_type.run[27m[K
+[7m./test/err_cmp_type.run[27m[K
+[K
+[7mecho -e "\n=== RUNNING COMPILE ERROR TESTS ==="[27m[K
+[7mecho "Testing err_if_unbound..."[27m[K
+[7mcargo run -- test/err_if_unbound.snek test/err_if_unbound.s[27m[K
+[K
+[7mecho -e "\nTesting err_break..."[27m[K
+[7mcargo run -- test/err_break.snek test/err_break.s[27m[K
+[K
+[7mecho -e "\n=== ALL COBRA TESTS COMPLETE ==="[27m[K[14A[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27ma[27md[27md[27m_[27mb[27mo[27mo[27ml[27m.[27mr[27mu[27mn[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27ma[27md[27md[27m_[27mb[27mo[27mo[27ml[27m.[27mr[27mu[27mn[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27m.[27m.[27m"[1B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m=[27m=[27m=[27m [27mR[27mU[27mN[27mN[27mI[27mN[27mG[27m [27mC[27mO[27mM[27mP[27mI[27mL[27mE[27m [27mE[27mR[27mR[27mO[27mR[27m [27mT[27mE[27mS[27mT[27mS[27m [27m=[27m=[27m=[27m"[1B[27me[27mc[27mh[27mo[27m [27m"[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27m.[27m.[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27m.[27m.[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m=[27m=[27m=[27m [27mA[27mL[27mL[27m [27mC[27mO[27mB[27mR[27mA[27m [27mT[27mE[27mS[27mT[27mS[27m [27mC[27mO[27mM[27mP[27mL[27mE[27mT[27mE[27m [27m=[27m=[27m=[27m"[?2004l
+=== RUNNING VALID COBRA TESTS ===
+Testing test/bool_true...
+make: `test/bool_true.run' is up to date.
+true
+-------------------
+Testing test/bool_false...
+make: `test/bool_false.run' is up to date.
+false
+-------------------
+Testing test/if_simple...
+make: `test/if_simple.run' is up to date.
+73
+-------------------
+Testing test/if_truthy...
+make: `test/if_truthy.run' is up to date.
+10
+-------------------
+Testing test/if_nested...
+make: `test/if_nested.run' is up to date.
+100
+-------------------
+Testing test/block_simple...
+make: `test/block_simple.run' is up to date.
+9
+-------------------
+Testing test/loop_break...
+make: `test/loop_break.run' is up to date.
+42
+-------------------
+Testing test/loop_nested_break...
+make: `test/loop_nested_break.run' is up to date.
+2
+-------------------
+Testing test/set_simple...
+make: `test/set_simple.run' is up to date.
+20
+-------------------
+Testing test/set_loop...
+make: `test/set_loop.run' is up to date.
+5
+-------------------
+Testing test/cmp_eq...
+make: `test/cmp_eq.run' is up to date.
+true
+-------------------
+Testing test/cmp_less...
+make: `test/cmp_less.run' is up to date.
+true
+-------------------
+Testing test/cmp_greater...
+make: `test/cmp_greater.run' is up to date.
+true
+-------------------
+Testing test/type_isnum...
+make: `test/type_isnum.run' is up to date.
+true
+-------------------
+Testing test/type_isbool...
+make: `test/type_isbool.run' is up to date.
+true
+-------------------
+Testing test/complex_mix...
+make: `test/complex_mix.run' is up to date.
+15
+-------------------
+
+=== RUNNING RUNTIME ERROR TESTS ===
+Testing err_add_bool...
+make: `test/err_add_bool.run' is up to date.
+invalid argument
+
+Testing err_cmp_type...
+make: `test/err_cmp_type.run' is up to date.
+invalid argument
+
+=== RUNNING COMPILE ERROR TESTS ===
+Testing err_if_unbound...
 [1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.05s
-[1m[92m     Running[0m `target/debug/adder test/err_dup.snek test/err_dup.s`
+[1m[92m     Running[0m `target/debug/adder test/err_if_unbound.snek test/err_if_unbound.s`
 
-thread 'main' (8126257) panicked at src/main.rs:128:21:
-Duplicate binding
+thread 'main' (13974977) panicked at src/main.rs:103:21:
+Unbound variable identifier x
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcargo run -- test/err_unbound.snek test/err_unbound.s[27m[53D[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[?2004l
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.04s
-[1m[92m     Running[0m `target/debug/adder test/err_unbound.snek test/err_unbound.s`
 
-thread 'main' (8126686) panicked at src/main.rs:91:25:
-Unbound variable identifier y
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcargo run -- test/err_keyword.snek test/err_keyword.s[27m[53D[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mk[27me[27my[27mw[27mo[27mr[27md[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mk[27me[27my[27mw[27mo[27mr[27md[27m.[27ms[?2004l
-[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.04s
-[1m[92m     Running[0m `target/debug/adder test/err_keyword.snek test/err_keyword.s`
+Testing err_break...
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_break.snek test/err_break.s`
 
-thread 'main' (8126952) panicked at src/main.rs:30:21:
-Invalid
+thread 'main' (13975004) panicked at src/main.rs:191:25:
+break outside of loop
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004hggit add .[?2004l
+
+=== ALL COBRA TESTS COMPLETE ===
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h[7mcat << 'EOF' > test/cmp_lesseq.snek[27m
+[7m(<= 5 5)[27m[K
+[7mEOF[27m[K
+[K
+[7mcat << 'EOF' > test/cmp_greatereq.snek[27m[K
+[7m(>= 10 20)[27m[K
+[7mEOF[27m[K
+[K
+[7mcat << 'EOF' > test/err_overflow.snek[27m[K
+[7m(* 1000000000 1000000000)[27m[K
+[7mEOF[27m[K[10A[38C[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27ml[27me[27ms[27ms[27me[27mq[27m.[27ms[27mn[27me[27mk[1B[27m([27m<[27m=[27m [27m5[27m [27m5[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27mc[27mm[27mp[27m_[27mg[27mr[27me[27ma[27mt[27me[27mr[27me[27mq[27m.[27ms[27mn[27me[27mk[1B[27m([27m>[27m=[27m [27m1[27m0[27m [27m2[27m0[27m)[1B[27mE[27mO[27mF[2B[27mc[27ma[27mt[27m [27m<[27m<[27m [27m'[27mE[27mO[27mF[27m'[27m [27m>[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mo[27mv[27me[27mr[27mf[27ml[27mo[27mw[27m.[27ms[27mn[27me[27mk[1B[27m([27m*[27m [27m1[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m [27m1[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m0[27m)[1B[27mE[27mO[27mF[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h>....                                                                 
+[7mecho -e "\nTesting err_cmp_type..."[27m[K
+[7mmake test/err_cmp_type.run[27m[K
+[7m./test/err_cmp_type.run[27m[K
+[K
+[7mecho -e "\nTesting err_overflow..."[27m[K
+[7mmake test/err_overflow.run[27m[K
+[7m./test/err_overflow.run[27m[K
+[K
+[7mecho -e "\nTesting err_if_unbound..."[27m[K
+[7mcargo run -- test/err_if_unbound.snek test/err_if_unbound.s[27m[K
+[K
+[7mecho -e "\nTesting err_break..."[27m[K
+[7mcargo run -- test/err_break.snek test/err_break.s[27m[K
+[K
+[7mecho -e "\n=== ALL COBRA TESTS COMPLETE ==="[27m[K[14A[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27m.[27m.[27m"[1B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mc[27mm[27mp[27m_[27mt[27my[27mp[27me[27m.[27mr[27mu[27mn[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mo[27mv[27me[27mr[27mf[27ml[27mo[27mw[27m.[27m.[27m.[27m"[1B[27mm[27ma[27mk[27me[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mo[27mv[27me[27mr[27mf[27ml[27mo[27mw[27m.[27mr[27mu[27mn[1B[27m.[27m/[27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mo[27mv[27me[27mr[27mf[27ml[27mo[27mw[27m.[27mr[27mu[27mn[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27m.[27m.[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mi[27mf[27m_[27mu[27mn[27mb[27mo[27mu[27mn[27md[27m.[27ms[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27mT[27me[27ms[27mt[27mi[27mn[27mg[27m [27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27m.[27m.[27m"[1B[27mc[27ma[27mr[27mg[27mo[27m [27mr[27mu[27mn[27m [27m-[27m-[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[27mn[27me[27mk[27m [27mt[27me[27ms[27mt[27m/[27me[27mr[27mr[27m_[27mb[27mr[27me[27ma[27mk[27m.[27ms[2B[27me[27mc[27mh[27mo[27m [27m-[27me[27m [27m"[27m\[27mn[27m=[27m=[27m=[27m [27mA[27mL[27mL[27m [27mC[27mO[27mB[27mR[27mA[27m [27mT[27mE[27mS[27mT[27mS[27m [27mC[27mO[27mM[27mP[27mL[27mE[27mT[27mE[27m [27m=[27m=[27m=[27m"[?2004l
+=== RUNNING 18 VALID COBRA TESTS ===
+Testing test/bool_true...
+cargo run -- test/bool_true.snek test/bool_true.s
+[1m[92m   Compiling[0m adder v0.1.0 (/Users/Base/Desktop/FISK/Assignments/Programming Language(PL)/Compiler – Assigment/adder)
+[1m[96m    Building[0m [=======================>   ] 12/13: adder(bin)                                                 [K[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.83s
+[1m[92m     Running[0m `target/debug/adder test/bool_true.snek test/bool_true.s`
+nasm -f macho64 test/bool_true.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_true.run
+true
+-------------------
+Testing test/bool_false...
+cargo run -- test/bool_false.snek test/bool_false.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/bool_false.snek test/bool_false.s`
+nasm -f macho64 test/bool_false.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/bool_false.run
+false
+-------------------
+Testing test/if_simple...
+cargo run -- test/if_simple.snek test/if_simple.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/if_simple.snek test/if_simple.s`
+nasm -f macho64 test/if_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_simple.run
+73
+-------------------
+Testing test/if_truthy...
+cargo run -- test/if_truthy.snek test/if_truthy.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/if_truthy.snek test/if_truthy.s`
+nasm -f macho64 test/if_truthy.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_truthy.run
+10
+-------------------
+Testing test/if_nested...
+cargo run -- test/if_nested.snek test/if_nested.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/if_nested.snek test/if_nested.s`
+nasm -f macho64 test/if_nested.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/if_nested.run
+100
+-------------------
+Testing test/block_simple...
+cargo run -- test/block_simple.snek test/block_simple.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/block_simple.snek test/block_simple.s`
+nasm -f macho64 test/block_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/block_simple.run
+9
+-------------------
+Testing test/loop_break...
+cargo run -- test/loop_break.snek test/loop_break.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/loop_break.snek test/loop_break.s`
+nasm -f macho64 test/loop_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_break.run
+42
+-------------------
+Testing test/loop_nested_break...
+cargo run -- test/loop_nested_break.snek test/loop_nested_break.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/loop_nested_break.snek test/loop_nested_break.s`
+nasm -f macho64 test/loop_nested_break.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/loop_nested_break.run
+2
+-------------------
+Testing test/set_simple...
+cargo run -- test/set_simple.snek test/set_simple.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/set_simple.snek test/set_simple.s`
+nasm -f macho64 test/set_simple.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_simple.run
+20
+-------------------
+Testing test/set_loop...
+cargo run -- test/set_loop.snek test/set_loop.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/set_loop.snek test/set_loop.s`
+nasm -f macho64 test/set_loop.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/set_loop.run
+5
+-------------------
+Testing test/cmp_eq...
+cargo run -- test/cmp_eq.snek test/cmp_eq.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_eq.snek test/cmp_eq.s`
+nasm -f macho64 test/cmp_eq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_eq.run
+true
+-------------------
+Testing test/cmp_less...
+cargo run -- test/cmp_less.snek test/cmp_less.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_less.snek test/cmp_less.s`
+nasm -f macho64 test/cmp_less.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_less.run
+true
+-------------------
+Testing test/cmp_greater...
+cargo run -- test/cmp_greater.snek test/cmp_greater.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_greater.snek test/cmp_greater.s`
+nasm -f macho64 test/cmp_greater.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_greater.run
+true
+-------------------
+Testing test/cmp_lesseq...
+cargo run -- test/cmp_lesseq.snek test/cmp_lesseq.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_lesseq.snek test/cmp_lesseq.s`
+nasm -f macho64 test/cmp_lesseq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_lesseq.run
+true
+-------------------
+Testing test/cmp_greatereq...
+cargo run -- test/cmp_greatereq.snek test/cmp_greatereq.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/cmp_greatereq.snek test/cmp_greatereq.s`
+nasm -f macho64 test/cmp_greatereq.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/cmp_greatereq.run
+false
+-------------------
+Testing test/type_isnum...
+cargo run -- test/type_isnum.snek test/type_isnum.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/type_isnum.snek test/type_isnum.s`
+nasm -f macho64 test/type_isnum.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isnum.run
+true
+-------------------
+Testing test/type_isbool...
+cargo run -- test/type_isbool.snek test/type_isbool.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/type_isbool.snek test/type_isbool.s`
+nasm -f macho64 test/type_isbool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/type_isbool.run
+true
+-------------------
+Testing test/complex_mix...
+cargo run -- test/complex_mix.snek test/complex_mix.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/complex_mix.snek test/complex_mix.s`
+nasm -f macho64 test/complex_mix.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/complex_mix.run
+15
+-------------------
+
+=== RUNNING 5 RUNTIME & COMPILE ERROR TESTS ===
+Testing err_add_bool...
+cargo run -- test/err_add_bool.snek test/err_add_bool.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_add_bool.snek test/err_add_bool.s`
+nasm -f macho64 test/err_add_bool.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/err_add_bool.run
+invalid argument
+
+Testing err_cmp_type...
+cargo run -- test/err_cmp_type.snek test/err_cmp_type.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_cmp_type.snek test/err_cmp_type.s`
+nasm -f macho64 test/err_cmp_type.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/err_cmp_type.run
+invalid argument
+
+Testing err_overflow...
+cargo run -- test/err_overflow.snek test/err_overflow.s
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_overflow.snek test/err_overflow.s`
+nasm -f macho64 test/err_overflow.s -o runtime/our_code.o
+ar rcs runtime/libour_code.a runtime/our_code.o
+rustc --target x86_64-apple-darwin -L runtime/ runtime/start.rs -o test/err_overflow.run
+1000000000000000000
+
+Testing err_if_unbound...
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_if_unbound.snek test/err_if_unbound.s`
+
+thread 'main' (13986262) panicked at src/main.rs:103:21:
+Unbound variable identifier x
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+Testing err_break...
+[1m[92m    Finished[0m ]8;;https://doc.rust-lang.org/cargo/reference/profiles.html#default-profiles\`dev` profile [unoptimized + debuginfo]]8;;\ target(s) in 0.00s
+[1m[92m     Running[0m `target/debug/adder test/err_break.snek test/err_break.s`
+
+thread 'main' (13986283) panicked at src/main.rs:191:25:
+break outside of loop
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+=== ALL COBRA TESTS COMPLETE ===
 [1m[7m%[27m[1m[0m                                                                                                               [0m[27m[24m[J(base) Base@Michaels-MacBook-Air adder % [K[?2004h
