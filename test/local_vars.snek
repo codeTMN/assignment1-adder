@@ -1,0 +1,2 @@
+(fun (compute x) (let ((y (* x 2))) (+ y x)))
+(compute 10)

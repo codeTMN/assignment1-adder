@@ -12,35 +12,37 @@ pub extern "C" fn snek_error(errcode: i64) {
     std::process::exit(1);
 }
 
-fn print_value(val: i64) {
+#[export_name = "\x01snek_print"]
+pub extern "C" fn snek_print(val: i64) -> i64 {
     if val == 3 {
         println!("true");
     } else if val == 1 {
         println!("false");
     } else if val & 1 == 0 {
-        println!("{}", val >> 1); // Shift right to untag number
+        println!("{}", val >> 1);
     } else {
         println!("Unknown value: {}", val);
     }
+    val
 }
 
 fn main() {
     let args: Vec<String> = env::args().collect();
     let input = if args.len() > 1 {
         if args[1] == "true" {
-            3 // 0b11
+            3 
         } else if args[1] == "false" {
-            1 // 0b01
+            1 
         } else {
             let parsed: i64 = args[1].parse().expect("Invalid input");
-            parsed << 1 // Shift left for numbers
+            parsed << 1 
         }
     } else {
-        1 // Default to false if no input
+        1 
     };
 
     let result = unsafe { our_code_starts_here(input) };
-    print_value(result);
+    snek_print(result); // Reuse print logic for final output
 }
 
 #[link(name = "our_code")]

@@ -1,0 +1,2 @@
+(fun (not b) (if b false true))
+(not false)

@@ -1,4 +1,4 @@
-# Cobra Compiler
+# Diamondback Compiler
 
 **Course:** CSCI 282L / Programming Languages
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-Boa is an expression compiler written in Rust that builds on the foundations of Adder. It compiles a small S-expression-based language into x86-64 assembly, introducing **variables**, **let bindings**, **binary arithmetic**, and **stack-based memory management**. The generated assembly is then linked with a minimal Rust runtime that executes the code and prints the evaluated result.
+Diamondback is an expression compiler written in Rust that builds on the foundations of Adder, Boa, and Cobra. It compiles a small S-expression-based language into x86-64 assembly, supporting **variables**, **let bindings**, **binary arithmetic**, **conditionals**, **tagged value representation**, **function definitions**, **function calls**, and **stack frame management**. The generated assembly is then linked with a minimal C runtime that executes the code and prints the evaluated result.
 
 ## What Changed from Adder (Boa Changelog)
 
@@ -73,6 +73,85 @@ The compiler supports 32-bit signed integers, unary operations, variables, let b
 2. **Code Generator (`src/main.rs`)** — Recursively traverses the AST and emits corresponding x86-64 assembly instructions (`mov`, `add`, `sub`, `neg`, `imul`), storing intermediate and final results in the `rax` register.
 3. **Runtime (`runtime/start.rs`)** — A minimal Rust wrapper compiled as a C-callable executable. It calls the `our_code_starts_here` global label from the generated assembly and prints the returned 64-bit integer to standard output.
 4. **Stack & Environment Management** — The compiler uses the `im::HashMap` crate to track variable environments, allowing for inner scope shadowing. Local variables are mapped to 8-byte stack offsets starting from `rsp - 16`. During binary operations, the left operand is temporarily saved to the stack to prevent register overwriting.
+
+## Diamondback: Functions and Stack Frames
+
+Diamondback introduces **user-defined functions** and **function calls**, bringing the language from a flat expression evaluator to something that actually feels like a real programming language. This required implementing a proper x86-64 calling convention with stack frame management — by far the most architecturally significant change so far.
+
+### x86-64 Calling Convention
+
+The compiler follows a structured caller/callee protocol to ensure that nested and recursive function calls don't corrupt each other's data.
+
+#### Caller Responsibilities
+
+- **Evaluates arguments right-to-left** and pushes each result onto the stack. This guarantees that the first argument ends up closest to the top of the callee's frame, matching the expected positive-offset access pattern.
+- **Aligns the stack to 16 bytes** before issuing the `call` instruction. x86-64 requires 16-byte stack alignment at the point of a `call`, so the compiler inserts a padding `push` when the argument count is even (since `call` itself pushes an 8-byte return address).
+- **Cleans up the stack** after the function returns by adding back to `rsp` to pop off all the arguments (and any alignment padding).
+
+```asm
+;; Example: calling f(1, 2, 3)
+push 6          ; arg 3 (tagged: 3 << 1)
+push 4          ; arg 2 (tagged: 2 << 1)
+push 2          ; arg 1 (tagged: 1 << 1)
+call fun_f
+add rsp, 24    ; clean up 3 args × 8 bytes
+```
+
+#### Callee Responsibilities
+
+- **Prologue** — Saves the caller's base pointer and establishes its own frame:
+  ```asm
+  push rbp
+  mov rbp, rsp
+  sub rsp, <locals * 8>   ; reserve space for local variables
+  ```
+- **Epilogue** — Tears down the frame and returns control to the caller:
+  ```asm
+  mov rsp, rbp
+  pop rbp
+  ret
+  ```
+
+This `push rbp` / `pop rbp` dance is what allows arbitrarily deep call chains (including recursion) to work without stepping on each other's memory.
+
+### Memory Layout
+
+The stack frame is split into two regions relative to `rbp`:
+
+| Region | Offset from `rbp` | Description |
+|---|---|---|
+| Return address | `[rbp + 8]` | Pushed automatically by `call` |
+| Parameter 1 | `[rbp + 16]` | First argument passed by the caller |
+| Parameter 2 | `[rbp + 24]` | Second argument |
+| Parameter *n* | `[rbp + 8*(n+1)]` | *n*-th argument |
+| Local variable 1 | `[rsp + 8]` | First let-bound variable |
+| Local variable 2 | `[rsp + 16]` | Second let-bound variable |
+
+- **Parameters** are accessed via **positive offsets from `rbp`**, since the caller pushed them *before* the `call` instruction pushed the return address and *before* the callee pushed `rbp`.
+- **Local variables** are mapped to **positive offsets from `rsp`** (which sits below `rbp` after the `sub rsp, ...` in the prologue). This prevents nested function calls from overwriting locals — each callee gets its own frame below the current `rsp`.
+
+### Built-in `print` Function
+
+Diamondback adds a built-in `print` function implemented as a C-interop routine linked from the runtime. It dynamically unwraps the tagged representation at runtime to produce human-readable output:
+
+- If the LSB is `0`, the value is a **number** — it shifts right by 1 and prints the integer.
+- If the value is `3`, it prints `true`.
+- If the value is `1`, it prints `false`.
+
+```c
+// Simplified logic from the runtime
+if (val == 3) {
+    printf("true\n");
+} else if (val == 1) {
+    printf("false\n");
+} else if ((val & 1) == 0) {
+    printf("%lld\n", val >> 1);
+}
+```
+
+Unlike `snek_error`, `print` does **not** halt execution — it outputs the value and returns it, making it usable inline within expressions (e.g., `(print (+ 1 2))` prints `3` and evaluates to `3`).
+
+---
 
 ## System Requirements & Setup
 

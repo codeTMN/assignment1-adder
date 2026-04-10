@@ -1,0 +1,2 @@
+(fun (f x) (let ((y 0)) (block (set! y x) y)))
+(f 99)
